@@ -14,12 +14,12 @@ const HomePage = () => {
 }
 
 const services = getServices()
-
+console.log(services)
 const buttons = (
     services.map(service =>
         <ServiceButton
             serviceName={service.name}
-            serviceLogo={service.img}
+            serviceLogo={service.body}
         />
     ))
 
@@ -31,7 +31,7 @@ const App = () => (
             {
                 services.map(service =>
                     <Route path={service.name}
-                           element={<ServiceComponent serviceUrl={service.serviceUrl}/>}/>
+                           element={<ServiceComponent serviceUrl={service.url}/>}/>
                 )}
 
         </Routes>

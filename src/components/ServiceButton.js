@@ -5,7 +5,7 @@ import '../styles/style.css'
 export const ServiceButton = ({serviceName, serviceLogo}) => {
     const navigate = useNavigate()
     return (
-        <button onClick={() => {
+        <button className='server-btn' onClick={() => {
             navigate(serviceName)
         }}>
             <img src={serviceLogo}/>

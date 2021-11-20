@@ -5,9 +5,9 @@ import img6 from '../sources/image 6.png'
 
 export const getServices = () => {
     return [
-        {name: 'okko', img: img3, serviceUrl: 'okko'},
-        {name: 'sber-sound', img: img4, serviceUrl: 'sber-sound'},
-        {name: 'sber-market', img: img5, serviceUrl: 'sber-market'},
-        {name: 'delivery-club', img: img6, serviceUrl: 'delivery-club'}
+        {name: 'okko', img: img3, serviceUrl: 'https://okko.tv'},
+        {name: 'sber-sound', img: img4, serviceUrl: 'https://sber-zvuk.com'},
+        {name: 'sber-market', img: img5, serviceUrl: 'https://sbermarket.ru'},
+        {name: 'delivery-club', img: img6, serviceUrl: 'https://www.delivery-club.ru'}
     ]
 }

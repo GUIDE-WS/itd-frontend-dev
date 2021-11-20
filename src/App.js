@@ -30,7 +30,8 @@ const App = () => (
             <Route path='/' element={<HomePage/>}/>
             {
                 services.map(service =>
-                    <Route path={service.name} element={<ServiceComponent serviceUrl={service.serviceUrl}/>}/>
+                    <Route path={service.name}
+                           element={<ServiceComponent serviceUrl={service.serviceUrl}/>}/>
                 )}
 
         </Routes>

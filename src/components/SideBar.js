@@ -6,7 +6,9 @@ import {ButtonsList} from "./ButtonsList";
 export const SideBar = ({buttons}) => {
     return (
         <>
-            <img src={logo}/>
+            <div>
+                <img src={logo} alt="Логотип SberPrime"/>
+            </div>
             <ButtonsList buttons={buttons}/>
         </>
     )

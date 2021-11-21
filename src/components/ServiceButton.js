@@ -1,6 +1,5 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import '../styles/style.css'
 
 export const ServiceButton = ({serviceName, serviceLogo}) => {
     const navigate = useNavigate()
@@ -8,7 +7,7 @@ export const ServiceButton = ({serviceName, serviceLogo}) => {
         <button className='server-btn' onClick={() => {
             navigate(serviceName)
         }}>
-            <img src={serviceLogo}/>
+            <img src={serviceLogo} alt='service logo'/>
         </button>
     )
 }

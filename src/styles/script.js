@@ -34,5 +34,3 @@ serviceButtons.forEach(cb => cb.addEventListener("click", function (event) {
     content.append(serviceFrame);
     content.style.justifyContent = "flex-end";
 }));
-
-

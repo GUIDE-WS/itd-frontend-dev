@@ -1,27 +1,22 @@
 import React from "react";
 import './App.css';
+import './styles/style.css'
 import {SideBar} from "./components/SideBar";
 import {getServices} from "./components/getServices";
 import {ServiceButton} from "./components/ServiceButton";
 import {Route, Routes} from "react-router-dom";
+import {ServiceComponent} from "./ServiceComponent";
+import {HomePage} from "./HomePage";
 
-
-const ServiceComponent = ({serviceUrl}) => {
-    return <iframe src={serviceUrl}></iframe>
-}
-const HomePage = () => {
-    return <div>Выберите интерисующий вас сервис</div>
-}
 
 const services = getServices()
-console.log(services)
-const buttons = (
-    services.map(service =>
-        <ServiceButton
-            serviceName={service.name}
-            serviceLogo={service.body}
-        />
-    ))
+let buttons = []
+for (let service of services.then(res=>res.data)) {
+    buttons.append(<ServiceButton
+        serviceName={service.name}
+        serviceLogo={service.body}
+    />)
+}
 
 const App = () => (
     <>

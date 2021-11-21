@@ -1,7 +1,3 @@
-import img3 from '../sources/image 3.png'
-import img4 from '../sources/image 4.png'
-import img5 from '../sources/image 5.png'
-import img6 from '../sources/image 6.png'
 import axios from "axios";
 
 /*export const getServices = () => {
@@ -13,7 +9,7 @@ import axios from "axios";
     ]
 }*/
 
-export const getServices = () => {
-    return JSON.parse(
-        axios.get('http://127.0.0.1:8000').then(res => res.data));
+export const getServices = async () => {
+    let response = await axios.get('http://127.0.0.1:8000')
+    return response
 }

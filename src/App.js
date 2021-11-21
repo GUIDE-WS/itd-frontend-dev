@@ -10,13 +10,22 @@ import {HomePage} from "./HomePage";
 
 
 const services = getServices()
-let buttons = []
-for (let service of services.then(res=>res.data)) {
+
+//не забыть поменять поля
+/*let buttons = []
+for (let service of services) {
     buttons.append(<ServiceButton
         serviceName={service.name}
-        serviceLogo={service.body}
+        serviceLogo={service.img}
     />)
-}
+}*/
+
+const buttons = services.map(service =>
+    <ServiceButton
+        serviceName={service.name}
+        serviceLogo={service.img}
+    />
+)
 
 const App = () => (
     <>
@@ -26,7 +35,7 @@ const App = () => (
             {
                 services.map(service =>
                     <Route path={service.name}
-                           element={<ServiceComponent serviceUrl={service.url}/>}/>
+                           element={<ServiceComponent serviceUrl={service.serviceUrl}/>}/>
                 )}
 
         </Routes>
